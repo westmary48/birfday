@@ -2,12 +2,14 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import birfday from '../../components/birfday/birfday';
+import friends from '../../components/Friends/friends';
 
 const authDiv = document.getElementById('auth');
 const birfdayDiv = document.getElementById('birfday');
 const birfdayNavbar = document.getElementById('navbar-button-birfday');
 const authNavbar = document.getElementById('navbar-button-auth');
 const logoutNavbar = document.getElementById('navbar-button-logout');
+
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -18,6 +20,7 @@ const checkLoginStatus = () => {
       authNavbar.classList.add('hide');
       logoutNavbar.classList.remove('hide');
       birfday.birfdayPrint(user.uid);
+      friends.showFriends();
     } else {
       authDiv.classList.remove('hide');
       birfdayDiv.classList.add('hide');
