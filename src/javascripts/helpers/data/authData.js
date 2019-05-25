@@ -1,6 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import birfday from '../../components/birfday/birfday';
+
 const authDiv = document.getElementById('auth');
 const birfdayDiv = document.getElementById('birfday');
 const birfdayNavbar = document.getElementById('navbar-button-birfday');
@@ -15,6 +17,7 @@ const checkLoginStatus = () => {
       birfdayNavbar.classList.remove('hide');
       authNavbar.classList.add('hide');
       logoutNavbar.classList.remove('hide');
+      birfday.birfdayPrint(user.uid);
     } else {
       authDiv.classList.remove('hide');
       birfdayDiv.classList.add('hide');
