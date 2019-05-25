@@ -1,0 +1,22 @@
+{
+  "friend1": {
+    "name": "Callan Morrison",
+    "email": "callan@aol.com",
+    "uid": "12345"
+  },
+  "friend2": {
+    "name": "Michael Clark",
+    "email": "bigmike@aol.com",
+    "uid": "soM7WQgVHYQNKD5WJQslJElcnjA2"
+  },
+  "friend3": {
+    "name": "Greg Korte",
+    "email": "og@aol.com",
+    "uid": "soM7WQgVHYQNKD5WJQslJElcnjA2"
+  },
+  "friend4": {
+    "name": "Adam Barnhard",
+    "email": "thebestadam@aol.com",
+    "uid": "soM7WQgVHYQNKD5WJQslJElcnjA2"
+  }
+}
