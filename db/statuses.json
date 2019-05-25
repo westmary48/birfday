@@ -1,0 +1,11 @@
+{
+  "status1": {
+    "type": "unknown"
+  },
+  "status2": {
+    "type": "yes"
+  },
+  "status3": {
+    "type": "no"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "rsvp1": {
+    "friendId": "friend1",
+    "statusId": "status1",
+    "birthdayId": "birthday2"
+  },
+  "rsvp2": {
+    "friendId": "friend2",
+    "statusId": "status1",
+    "birthdayId": "birthday1"
+  },
+  "rsvp3": {
+    "friendId": "friend3",
+    "statusId": "status3",
+    "birthdayId": "birthday1"
+  },
+  "rsvp4": {
+    "friendId": "friend4",
+    "statusId": "status2",
+    "birthdayId": "birthday1"
+  }
+}
