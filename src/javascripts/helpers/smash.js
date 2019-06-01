@@ -1,5 +1,4 @@
 const friendRsvps = (friends, rsvps) => friends.map((friend) => {
-  console.error(rsvps);
   const f = friend;
   const rsvp = rsvps.find(r => r.friendId === f.id);
   if (rsvp) {

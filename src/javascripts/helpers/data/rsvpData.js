@@ -5,7 +5,6 @@ import apiKeys from '../apiKeys.json';
 const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getRsvpsByBirthdayId = birthdayId => new Promise((resolve, reject) => {
-  console.error(birthdayId);
   axios.get(`${firebaseUrl}/rsvps.json?orderBy="birthdayId"&equalTo="${birthdayId}"`)
     .then((results) => {
       const rsvpResults = results.data;
