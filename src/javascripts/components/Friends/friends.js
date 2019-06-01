@@ -18,6 +18,7 @@ const createNewFriend = (e) => {
       document.getElementById('email').value = '';
       document.getElementById('birfday').classList.remove('hide');
       document.getElementById('new-friend').classList.add('hide');
+      getFriends(firebase.auth().currentUser.uid); // eslint-disable-line no-use-before-define
     })
     .catch(error => console.error('no new friends', error));
 };
