@@ -47,6 +47,15 @@ const radioButtonEvent = (e) => {
     friendId: e.target.id.split('.')[1],
     statusId: e.target.value,
   };
+  if (rsvpId) {
+    rsvpData.editRsvp(rsvpId, rsvp)
+      .then(() => getFriends(firebase.auth().currentUser.uid)) // eslint-disable-line no-use-before-define
+      .catch(err => console.error('no update', err));
+  } else {
+    rsvpData.addRsvp(rsvp)
+      .then(() => getFriends(firebase.auth().currentUser.uid)) // eslint-disable-line no-use-before-define
+      .catch(err => console.error('no update', err));
+  }
   console.error('rsvp', rsvp);
 };
 
