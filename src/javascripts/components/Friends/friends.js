@@ -3,6 +3,8 @@ import 'firebase/auth';
 
 import util from '../../helpers/util';
 import friendsData from '../../helpers/data/friendsData';
+import rsvpData from '../../helpers/data/rsvpData';
+import birfdayData from '../../helpers/data/birfdayData';
 
 
 const createNewFriend = (e) => {
@@ -86,14 +88,18 @@ const showFriends = (friends) => {
   addEvents();
 };
 
-
-const getFriends = uid => [
+const getFriends = (uid) => {
   friendsData.getFriendsByUid(uid)
     .then((friends) => {
-      console.error('friends array', friends);
-      showFriends(friends);
+      birfdayData.getBirfdayByUid(uid).then((bday) => {
+        rsvpData.getRsvpsByBirthdayId(bday.id).then((rsvps) => {
+          console.error('friends array', friends);
+          console.error('rsvps array', rsvps);
+          showFriends(friends);
+        });
+      });
     })
-    .catch(err => console.error('no friends', err)),
-];
+    .catch(err => console.error('no friends', err));
+};
 
 export default { getFriends };
