@@ -11,6 +11,8 @@ const getFriendsByUid = uid => new Promise((resolve, reject) => {
       const friends = [];
       Object.keys(friendResults).forEach((friendsId) => {
         friendResults[friendsId].id = friendsId;
+        friendResults[friendsId].rsvpId = '';
+        friendResults[friendsId].statusId = 'status1';
         friends.push(friendResults[friendsId]);
       });
       resolve(friends);
